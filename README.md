@@ -18,11 +18,11 @@ Implementation of Various 1-D Orthogonal Transforms.
 
 * To get the DFT of seq:
 ```
-python src/main.py --transform=dft --sequence=seq
+python src/ot_main.py --transform=dft --sequence=seq
 ```
 * To get the DIT-FFT of seq:
 ```
-python src/main.py --transform=ditfft --sequence=seq
+python src/ot_main.py --transform=ditfft --sequence=takeinput
 ```
 
 You can change the default values of other parameters to simulate different conditions. Refer to the options section.
@@ -31,7 +31,7 @@ You can change the default values of other parameters to simulate different cond
 The default values for paramters parsed to the experiment are given in ```options.py```. Details of those parameters are given:
 
 * ```--transform:```  Default: 'dft'. Options: 'dft', 'ditfft', 'diffft', 'dct', 'dst', 'wht', 'slant', 'haar', 'klt'
-* ```--sequence:```    Default: 'random' (length = 8). Options: 'random', '*name of list or, numpy array containing input sequence*'
+* ```--sequence:```    Default: 'random' (length = 8). Options: 'random', 'takeinput'
 
 
 ## Further Readings
