@@ -31,7 +31,7 @@ You can change the default values of other parameters to simulate different cond
 The default values for various paramters parsed to the experiment are given in ```options.py```. Details are given some of those parameters:
 
 * ```--transform:```  Default: 'dft'. Options: 'dft', 'ditfft', 'diffft', 'dct', 'dst', 'wht', 'slant', 'haar', 'klt'
-* ```--sequence:```    Default: 'random' (length = 8). Options: 'random', '*name of list containing input sequence*'
+* ```--sequence:```    Default: 'random' (length = 8). Options: 'random', '*name of list or, numpy array containing input sequence*'
 
 
 ## Further Readings
