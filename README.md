@@ -28,7 +28,7 @@ python src/main.py --transform=ditfft --sequence=seq
 You can change the default values of other parameters to simulate different conditions. Refer to the options section.
 
 ## Options
-The default values for various paramters parsed to the experiment are given in ```options.py```. Details are given some of those parameters:
+The default values for paramters parsed to the experiment are given in ```options.py```. Details of those parameters are given:
 
 * ```--transform:```  Default: 'dft'. Options: 'dft', 'ditfft', 'diffft', 'dct', 'dst', 'wht', 'slant', 'haar', 'klt'
 * ```--sequence:```    Default: 'random' (length = 8). Options: 'random', '*name of list or, numpy array containing input sequence*'
