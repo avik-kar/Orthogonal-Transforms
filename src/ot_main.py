@@ -52,7 +52,7 @@ if __name__ == '__main__':
     print("The {} of input sequence is: {}".format(task,outSequence))
 
     # Saving the objects train_loss and local_test_accuracy:
-    path = 'C:\\Users\\Avik\\Orthogonal Transforms\\save\\'  # Define save folder path here
+    path = 'C:\\Users\\User-name\\Orthogonal Transforms\\save\\'  # Define save folder path here
     file_name = '{}.pkl'.\
         format(task)
     with open(path+file_name, 'wb') as f:
