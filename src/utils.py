@@ -5,8 +5,14 @@
 import numpy as np
 import math
 
-#def get_sequence(args):
-    
+def getSequence():
+    inSequence = np.array([])
+    inSeqString = input("\nPlease enter the array (elements separated by space): ")
+    seqSplited = inSeqString.split()
+    for i in range(len(seqSplited)):
+        inSequence = np.append(inSequence, float(seqSplited[i]))
+    return inSequence
+
 def dft(seq):
     l = len(seq)
     out = np.zeros(l, dtype=complex)
@@ -67,12 +73,36 @@ def reArrange(seq):
                 k = k + (2**element)
         out[k] = seq[i]
     return out
+
+def viewable(seq):
+    for i in range(len(seq)):
+        if abs(seq[i].real) < 10**(-10):
+            seq[i] = 0 + 1j*seq[i].imag
+        if abs(seq[i].imag) < 10**(-10):
+            seq[i] = seq[i].real
+    return seq
     
 def dct(seq):
-    raise NotImplementedError()
-    
+    l = len(seq)
+    out = np.zeros(l)
+    for i in range(l):
+        for j in range(l):
+            out[i] = out[i] + 2*seq[j]*np.cos((math.pi*i*((2*j)+1))/(2*l))
+    return out
+   
+def viewable_r(seq):
+    for i in range(len(seq)):
+        if abs(seq[i]) < 10**(-10):
+            seq[i] = 0
+    return seq
+
 def dst(seq):
-    raise NotImplementedError()
+    l = len(seq)
+    out = np.zeros(l)
+    for i in range(l):
+        for j in range(l):
+            out[i] = out[i] + seq[j]*np.sin((math.pi*(i+1)*((2*j)+1))/(2*l))
+    return out
     
 def wht(seq):
     raise NotImplementedError()
@@ -85,14 +115,3 @@ def haar(seq):
     
 def klt(seq):
     raise NotImplementedError()
-    
-
-def exp_details(args):
-    print('\nExperimental details:')
-    print(f'    Model     : {args.model}')
-    print(f'    Algorithm : {args.algo}')
-    print(f'    Optimizer : {args.optimizer}')
-    print(f'    Learning  : {args.lr}')
-    print(f'    Global Rounds   : {args.epochs}\n')
-
-    return
