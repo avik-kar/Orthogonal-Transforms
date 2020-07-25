@@ -16,11 +16,11 @@ Implementation of Various 1-D Orthogonal Transforms.
 
 ## Running the experiments
 
-* To get the DFT of seq:
+* To get the DFT of randomly generated sequence:
 ```
-python src/ot_main.py --transform=dft --sequence=seq
+python src/ot_main.py --transform=dft --sequence=random
 ```
-* To get the DIT-FFT of seq:
+* To get the DIT-FFT of your own sequence:
 ```
 python src/ot_main.py --transform=ditfft --sequence=takeinput
 ```
